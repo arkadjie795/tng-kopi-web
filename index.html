@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TnG Kopi - Ngopi Santai, Kami yang Sampai</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">TnG Kopi</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#pesanan">Pesanan (<span id="count-cart">0</span>)</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="we-present">WE PRESENT</span>
+            <h1 class="main-title">T&G COFFEE</h1>
+            <p class="tagline">Ngopi santai, kami yang sampai.</p>
+            <div class="mission-points">
+                <span>RESPONSIF</span>
+                <span class="divider">,</span>
+                <span>EXPRESS</span>
+                <span class="divider">, AND</span>
+                <span>AFFORDABLE</span>
+            </div>
+            <p class="mission-full">MENJADI MINUMAN KOPI DAN NON-KOPI YANG BERKUALITAS DAN INOVATIF.</p>
+            <a href="#menu" class="btn-primary">Pesan Sekarang</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>Menu Kami</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>Kopi Susu Gula Aren</h3>
+                <p>Kopi espresso dengan susu dan gula aren asli.</p>
+                <p class="harga">Rp 18.000</p>
+                <button onclick="tambahKeKeranjang('Kopi Susu Gula Aren', 18000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-card">
+                <h3>Americano Ice</h3>
+                <p>Espresso murni dengan air es, segar dan kuat.</p>
+                <p class="harga">Rp 15.000</p>
+                <button onclick="tambahKeKeranjang('Americano Ice', 15000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-card">
+                <h3>Matcha Latte</h3>
+                <p>Premium matcha dengan susu segar pilihan.</p>
+                <p class="harga">Rp 20.000</p>
+                <button onclick="tambahKeKeranjang('Matcha Latte', 20000)">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pesanan" class="cart-section">
+        <h2>Keranjang Pesanan</h2>
+        
+        <div class="cart-container">
+            <div id="daftar-keranjang">
+                <p>Keranjang masih kosong.</p>
+            </div>
+            <div class="total-harga">
+                <h3>Total: <span id="total-bayar">Rp 0</span></h3>
+            </div>
+        </div>
+
+        <div class="form-checkout">
+            <h3>Detail Pengiriman & Pembayaran</h3>
+            <input type="text" id="nama-pemesan" placeholder="Nama Lengkap Kamu" required>
+            
+            <label for="opsi-pengantaran">Opsi Pengantaran:</label>
+            <select id="opsi-pengantaran">
+                <option value="Diantar (Delivery)">Diantar (Delivery)</option>
+                <option value="Ambil Sendiri (Pick Up)">Ambil Sendiri (Pick Up)</option>
+            </select>
+
+            <label for="opsi-pembayaran">Metode Pembayaran:</label>
+            <select id="opsi-pembayaran">
+                <option value="Cash (Tunai)">Cash (Tunai)</option>
+                <option value="COD (Bayar di Tempat)">COD (Bayar di Tempat)</option>
+                <option value="QRIS">QRIS</option>
+            </select>
+
+            <button id="btn-checkout" class="btn-wa">Kirim Pesanan & Record</button>
+        </div>
+    </section>
+</body>
+</html>
